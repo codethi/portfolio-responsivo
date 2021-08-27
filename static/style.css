@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+html,
+body {
+  font-family: Ubuntu, Arial;
+  width: 100%;
+  height: 100%;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: #021124;
+  overflow-y: auto;
+  width: 300px;
+  transition: all ease-in-out 0.5s;
+  padding: 0 15px;
+  z-index: 9997;
+}
+
+#header .profile img {
+  margin: 15px auto;
+  display: block;
+  width: 120px;
+  border: 8px solid #2c2f3f;
+  border-radius: 50%;
+}
+
+#header .profile h1 {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+}
+
+#header .profile .social-links a {
+  font-size: 1rem;
+  background: #212431;
+  color: #fff;
+  padding: 0.6rem;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+#header .profile .social-links a:hover {
+  background: #149ddd;
+}
+
+.nav-menu {
+  padding: 1.5rem;
+}
+
+.nav-menu a,
+.nav-menu a:focus {
+  display: flex;
+  align-items: center;
+  color: #a8a9b4;
+  transition: 0.3s;
+  font-size: 15px;
+}
+
+.nav-menu a i,
+.nav-menu a:focus i {
+  font-size: 24px;
+  padding-right: 0.8rem;
+  color: #6f7180;
+}
+
+.nav-menu a:hover,
+.nav-menu .active,
+.nav-menu .active:focus,
+.nav-menu li:hover > a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-menu a:hover i,
+.nav-menu .active i,
+.nav-menu .active:focus i,
+.nav-menu li:hover > a i {
+  color: #149ddd;
+}
+
+#main {
+  margin-left: 300px;
+}
+
+section#inicio {
+  background-image: url("./img/bannerPortifolio.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+
+  width: 100%;
+  height: 100vh;
+}
+
+section#inicio h2 {
+  font-size: 6rem;
+}
+
+section#inicio span#subtitle {
+  margin-right: 8rem;
+  font-size: 1.5rem;
+}
+
+.text-shadow {
+  text-shadow: 4px 4px 10px #000000;
+}
+
+section#inicio div#arraste {
+  width: 9rem;
+}
+
+
+section#inicio div#arraste a {
+    text-decoration: none;
+    color: #fff;
+}
