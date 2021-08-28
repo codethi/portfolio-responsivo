@@ -185,3 +185,68 @@ i.menu-mobile {
 .section-bg{
   background-color: #eff5ff;
 }
+
+.cv .cv-title{
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #050d18;
+}
+
+.cv .cv-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid #1f5297;
+  position: relative;
+}
+
+.cv .cv-item h4 {
+  line-height: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #050d18;
+  margin-bottom: 10px;
+}
+
+.cv .cv-item h5 {
+  background: #e4edf9;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.cv .cv-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -9px;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #1f5297;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.carousel-control-prev{
+  margin-left: -8rem;
+}
+
+.carousel-control-next{
+  margin-right: -8rem;
+}
+
+.carousel-indicators{
+  margin-bottom: -35px;
+}
+
+@media (max-width: 1860px){
+  .carousel-control-prev{
+    margin-left: 0;
+  }
+  
+  .carousel-control-next{
+    margin-right: 0;
+  }
+}
