@@ -167,8 +167,8 @@
                     <div class="col-md-6">
                         <p class='mt-3 mb-0'>HTML</p>
                         <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" data-anime="left"
-                                aria-valuemin="0" aria-valuemax="100">95%</div>
+                            <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95"
+                                data-anime="left" aria-valuemin="0" aria-valuemax="100">95%</div>
                         </div>
                         <p class="mt-3 mb-0">CSS</p>
                         <div class="progress">
@@ -535,25 +535,34 @@
                     <div class="col-md-7 mt-5 mt-md-0">
                         <div class="card p-5 h-100 shadow border-0" data-anime="left">
 
-                            <form class="row g-3">
+                            <form class="row g-3" action='/send' method="POST">
                                 <div class="col-md-6">
                                     <label for="nome" class="form-label">Nome:</label>
-                                    <input type="text" class="form-control" id="nome" name='nome' placeholder='Digiete seu nome'>
+                                    <input type="text" class="form-control" id="nome" name='nome'
+                                        placeholder='Digite seu nome' required>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="email" class="form-label">Email:</label>
-                                    <input type="email" class="form-control" id="email" name='email' placeholder='Digite seu email'>
+                                    <input type="email" class="form-control" id="email" name='email'
+                                        placeholder='Digite seu email' required>
                                 </div>
 
                                 <div class="col-12">
                                     <label for="mensagem" class="form-label">Mensagem:</label>
                                     <textarea type="text" class="form-control" id="mensagem" name='mensagem' rows="10"
-                                        placeholder="Digite sua mensagem"></textarea>
+                                        placeholder="Digite sua mensagem" required></textarea>
                                 </div>
 
 
                                 <div class="col-12 d-flex justify-content-center mt-4">
-                                    <button type="submit" class="btn btn-primary">Enviar mensagem</button>
+                                    <button id='btn-enviar' type="submit" class="btn btn-primary">Enviar
+                                        mensagem</button>
+
+                                    <button id='btn-enviar-loader' class="btn btn-primary" type="button" disabled>
+                                        <span class="spinner-border spinner-border-sm" role="status"
+                                            aria-hidden="true"></span>
+                                        Enviando...
+                                    </button>
                                 </div>
                             </form>
 
@@ -564,6 +573,19 @@
             </div>
 
         </section>
+
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <div id="alerta" class="alert alert-success alert-dismissible fade show" role="alert">
+            <i class="bi bi-check-circle-fill"></i> {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+
 
     </main>
 
